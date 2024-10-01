@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/app.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dispalying all the blogs</h1>
+    <section>
+    <% for(let item of  comments){%>
+        <div>
+        <h2> ID : <%= item.id%> </h2>
+        <h2> Name :<%= item.username%></h2>
+        <p><%= item.comment%></p>
+        <a href="/blogs/<%= item.id%>">show more </a>
+        <br>
+        <a href="/blogs/<%= item.id%>/edit">Edit </a>
+    </div>
+
+    <%}%>
+</section>
+</body>
+</html>
